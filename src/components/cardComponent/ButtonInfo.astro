@@ -1,0 +1,60 @@
+
+---
+
+interface Props {
+  pregunta: string;
+  tex: string;
+}
+
+const { pregunta, tex } = Astro.props;
+---
+    
+    
+<div
+  class="overflow-hidden rounded-xl border border-slate-800
+          bg-slate-900/50 transition-all duration-300
+          hover:border-blue-500/40 hover:bg-slate-900"
+>
+  <button
+    type="button"
+    class="faq-button flex w-full items-center justify-between gap-6
+           p-6 text-left text-white"
+  >
+       <span class="font-medium">
+      {pregunta}
+    </span>
+
+    <span
+      class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center
+             rounded-full border border-slate-700
+             text-xl text-blue-400 transition-transform duration-300"
+    >
+      +
+    </span>
+
+    </button>
+
+    <div class="faq-content hidden px-6 pb-6 text-slate-400">
+      <!-- Acá va la respuesta -->
+        <p>{tex} </p>
+    </div>
+</div>
+
+
+
+
+<script>
+
+  const buttons = document.querySelectorAll(".faq-button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling as HTMLElement;
+      const icon = button.querySelector(".faq-icon") as HTMLElement;
+
+      content.classList.toggle("hidden");
+
+      icon.classList.toggle("rotate-45");
+    });
+  });
+</script>

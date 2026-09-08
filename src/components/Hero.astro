@@ -1,0 +1,376 @@
+---
+import NeuronalNetwork from '../components/NeuronalNetwork.astro';
+import CardImg from './cardComponent/CardImg.astro';
+import CardInfo from './cardComponent/CardInfo.astro';
+import ButtonInfo from './cardComponent/ButtonInfo.astro';
+
+import celuImg from '../assets/celu.jpg';
+import notebookImg from '../assets/noteboock.jpg';
+import pcImg from '../assets/pc.jpg';
+
+
+---
+
+<div class="min-h-screen bg-slate-950 text-white">
+
+    <!-- HERO -->
+    <section 
+        id="home"
+        class=" relative h-[85vh] min-h-[600px] overflow-hidden border-b border-blue-950/40"
+    >
+
+        <!-- Fondo -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/40 via-slate-950 to-slate-950"></div>
+
+        <!-- Red neuronal -->
+        <NeuronalNetwork />
+
+        <!-- Contenido -->
+        <div
+            class="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-between gap-12 px-8 lg:px-16"
+        >
+
+            <!-- IZQUIERDA -->
+            <div class="max-w-2xl">
+
+                <span
+                    class="mb-5 inline-block rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold tracking-wide text-blue-300 backdrop-blur-sm"
+                >
+                    🔧 Servicio técnico · Lanús
+                </span>
+
+                <h1
+                    class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+                >
+                    Servicio técnico
+                    <span class="text-blue-400">
+                        para celulares,
+                    </span>
+                    PCs y notebooks
+                </h1>
+
+                <p
+                    class="mt-6 max-w-xl text-lg leading-relaxed text-slate-300"
+                >
+                    Reparación, mantenimiento y diagnóstico profesional
+                    para tus dispositivos. Soluciones rápidas, confiables
+                    y transparentes.
+                </p>
+
+                <!-- Botón -->
+                <div class="mt-8 flex flex-wrap gap-4">
+
+                    <a
+                        href="#contacto"
+                        class="rounded-xl bg-blue-500 px-7 py-3.5 font-bold text-white shadow-lg shadow-blue-500/20 transition duration-300 hover:-translate-y-1 hover:bg-blue-400 hover:shadow-blue-400/30"
+                    >
+                        Consultá por WhatsApp
+                    </a>
+
+                    <a
+                        href="#servicios"
+                        class="rounded-xl border border-slate-700 bg-slate-900/50 px-7 py-3.5 font-bold text-slate-200 backdrop-blur-sm transition duration-300 hover:border-blue-400/50 hover:bg-blue-950/40"
+                    >
+                        Ver servicios
+                    </a>
+
+                </div>
+
+                <!-- Datos rápidos -->
+                <div
+                    class="mt-10 flex flex-wrap gap-8 border-t border-slate-800 pt-6"
+                >
+
+                    <div>
+                        <span class="block text-sm text-slate-500">
+                            Atención
+                        </span>
+
+                        <span class="font-semibold text-slate-200">
+                            Lanús y alrededores
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="block text-sm text-slate-500">
+                            Diagnóstico
+                        </span>
+
+                        <span class="font-semibold text-slate-200">
+                            24 / 48 hs
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="block text-sm text-slate-500">
+                            Horarios
+                        </span>
+
+                        <span class="font-semibold text-slate-200">
+                            Lun. a Vie.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DERECHA -->
+            <div
+                class="hidden lg:flex lg:w-[380px] lg:justify-center"
+            >
+
+                <div
+                    class="relative flex h-80 w-80 items-center justify-center rounded-full border border-blue-400/20 bg-blue-950/20 shadow-2xl shadow-blue-900/20 backdrop-blur-sm"
+                >
+
+                    <!-- Círculo exterior -->
+                    <div
+                        class="absolute inset-5 rounded-full border border-blue-400/10"
+                    ></div>
+
+                    <div
+                        class="absolute inset-12 rounded-full border border-blue-400/10"
+                    ></div>
+
+                    <!-- Icono -->
+                    <div
+                        class="flex h-28 w-28 items-center justify-center rounded-3xl border border-blue-400/30 bg-blue-500/10 text-6xl shadow-lg shadow-blue-500/20"
+                    >
+                        🔧
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Degradado inferior -->
+        <div
+            class="pointer-events-none absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-slate-950 to-transparent"
+        ></div>
+
+    </section>
+
+    <!-- SERVICIOS / INFORMACIÓN -->
+
+    <section 
+        id="services"
+        class="relative mx-auto max-w-7xl px-8 py-24 lg:px-16 w-full"
+    >
+
+        <div class="max-w-3xl">
+
+            <span
+                class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400"
+            >
+                Servicios
+            </span>
+
+            <h2
+                class="mt-3 text-3xl font-bold sm:text-4xl"
+            >
+                Soluciones para todos tus dispositivos
+            </h2>
+
+            <p
+                class="mt-5 text-lg leading-relaxed text-slate-400"
+            >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sed temporibus quibusdam tempora quas necessitatibus,
+                id illo ullam et eaque iusto dolores sapiente magnam sunt
+                in quos. Culpa ipsa numquam illo.
+            </p>
+
+        </div>
+
+
+        <!-- CARDS -->
+        <div
+            class="mt-12 grid gap-6 md:grid-cols-3 w-full"
+        >
+
+            <CardInfo icon="src/assets/smartphone.png" title="Celulares" description="Reparación de modulo
+            Cambio de baterías
+            Conectores y fallas de software." ></CardInfo>
+            
+
+            <CardInfo icon="src/assets/torre-de-pc.png" title="Notebooks y Pc" description=" Mantenimiento
+            Limpieza
+            Reparación
+            Optimización de notebooks y Computadoras.">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=memory" />
+
+            </CardInfo>
+
+
+ 
+            <CardInfo icon="src/assets/infraestructura.png" title="Play y Joesty" description="Mantenimiento
+            Limpieza
+            Reparacion"></CardInfo>
+
+        </div>
+
+    </section>
+
+    <!-- preguntas Frecuentes -->
+
+<section id="faq" class="mx-auto max-w-4xl px-6 py-20">
+  <div class="space-y-4">
+
+    <ButtonInfo
+      pregunta="¿Cuándo conviene hacer un servicio de mantenimiento?"
+      tex="El mantenimiento regular ayuda a prevenir problemas futuros y prolonga la vida útil de tu dispositivo."
+    />
+
+    <ButtonInfo
+      pregunta="¿Cuánto tarda una vez entregado el dispositivo?"
+      tex="Los servicios de mantenimiento y diagnóstico suelen completarse en 24 a 48 horas."
+    />
+
+    <ButtonInfo
+      pregunta="¿Qué tipos de servicios ofrece?"
+      tex="Ofrecemos mantenimiento preventivo, diagnóstico, reparación de hardware y software y actualizaciones de sistemas."
+    />
+
+  </div>
+</section>
+
+    <!-- Galeria del Taller -->
+    <section id="about" class="relative mx-auto max-w-7xl px-8 py-24 lg:px-16 border-t border-slate-800/60">
+
+         
+        <div class="max-w-3xl">
+             
+            <span
+             class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400"
+             >
+                Galeria del Taller
+            </span>
+            
+            <h2
+            class="mt-3 text-3xl font-bold sm:text-4xl"
+            >
+                Trabajos realizados
+            </h2>
+        
+        
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+            <CardImg img={celuImg} title='Mantenimiento' description='Servicio de mantenimiento para celulares.'></CardImg>
+            <CardImg img={notebookImg} title='Notebooks' description='Reparación y mantenimiento de notebooks.'></CardImg>
+            <CardImg img={pcImg} title='Computadoras' description='Servicio de reparación para computadoras.'></CardImg>
+
+        </div>
+
+    </section>
+
+    
+    <!-- Cantacto  -->
+
+    <section
+    id="contact"
+    class="relative mx-auto max-w-7xl px-8 py-24 lg:px-16 border-t border-slate-800/60">
+
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div class="space-y-8">
+
+                <!-- informacion -->
+                <div class="flex flex-col gap-4">
+                    <span class="text-sm font-semibold uppercase tracking-widest text-blue-400">
+                        Ubicacion
+                    </span>
+
+                    <h2 class="mt-2 text-3xl font-bold text-white md:text-4xl">
+                        Donde estamos
+                    </h2>
+
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis libero similique dolores, modi molestiae nam vitae repellat excepturi labore quos eius hic quod, ullam aut aperiam rerum at unde repudiandae.
+                    </p>
+                    
+                </div>
+
+                <!-- Datos -->
+
+                <div class="space-y-5">
+                    
+                    <div class="flex items-start gap-4">
+                        
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
+                            📍
+                        </div>
+                        <span>Direccion</span>
+                        <p>
+                            B1824 Lanús, Provincia de Buenos Aires
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
+                            🕐
+                        </div>
+                        <span>Horario</span>
+                        <p>
+                        Lunes a Viernes · 9:00 - 18:00
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
+                        <svg
+                class="h-5 w-5 fill-green-500"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        </div>
+                        <span>WhatsApp</span>
+                        <p>
+                        +54 11 7140 633
+                        </p>
+                    </div>
+
+                </div>
+
+
+                
+            </div>
+
+            <div  class="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 shadow-xl">
+                <iframe  class="h-[450px] w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26242.067820972432!2d-58.41950675004144!3d-34.69865996687975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd2194f3cfb7%3A0x8c054a901d575260!2sB1824%20Lan%C3%BAs%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1788360329654!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+</div>
+
+
+<script>
+
+
+    const pregunta1 = document.querySelector('#pregunta1') as HTMLButtonElement
+    const pregunta2 = document.querySelector('#pregunta2') as HTMLButtonElement
+    const pregunta3 = document.querySelector('#pregunta3') as HTMLButtonElement
+
+    
+    function toggequest(button:HTMLButtonElement) {
+        button.addEventListener("click", (e) => {
+            console.log("click en botton",e.target)
+        })    
+    }
+
+    toggequest(pregunta1)
+    toggequest(pregunta2)
+    toggequest(pregunta3)
+</script>
+
